@@ -1,14 +1,11 @@
 # [Lab Project] Criando um Sistema Bancário com Python
 
-## Este projeto consiste em criar um sistema bancário simples, onde seja possível realizar depósitos, sacar e imprimir extratos.
+###	Este projeto consiste em criar um sistema bancário simples, onde seja possível realizar depósitos, sacar e imprimir extratos.
+###	Os saques, especificamente, devem respeitar o limite máximo diário de 3 retiradas, com um limite individual de R$500,00 por saque. Qualquer tentiva que esteja além desses limites deve ser negada.
+###	O projeto foi bastante interessante, pois nos dá oportunidade de testar algumas estruturas, como por exemplo, condicionais aninhadas (if aninhado), laços de repetição (while), interpolação de strings, etc.
+###	Foi bastante divertido e prazeroso executar este projeto.
 
-## Os saques, especificamente, devem respeitar o limite máximo diário de 3 retiradas, com um limite individual de R$500,00 por saque. Qualquer tentiva que esteja além desses limites deve ser negada.
-
-## O projeto foi bastante interessante, pois nos dá oportunidade de testar algumas estruturas, como condicionais aninhadas (if aninhado), laços de repetição (while), interpolação de strings, etc.
-
-## Foi bastante divertido e prazeroso executar este projeto.
-
-
+#### Código-fonte:
 ```
 from datetime import datetime
 
