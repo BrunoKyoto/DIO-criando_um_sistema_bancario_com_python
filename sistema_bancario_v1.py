@@ -13,7 +13,6 @@ saldo = 0.00
 LIMITE = 500
 data_atual = datetime.now()
 corpo_extrato = f""
-total_extrato = f"TOTAL EM CONTA: " + str(saldo)
 numero_saques = 0
 LIMITE_SAQUES = 2
 
