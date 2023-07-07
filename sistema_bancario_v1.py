@@ -1,5 +1,3 @@
-from datetime import datetime
-
 menu = """
 
 [d] Depositar
@@ -11,10 +9,9 @@ menu = """
 
 saldo = 0.00
 LIMITE = 500
-data_atual = datetime.now()
-corpo_extrato = f""
+corpo_extrato = ""
 numero_saques = 0
-LIMITE_SAQUES = 2
+LIMITE_SAQUES = 3
 
 while True:
 
@@ -27,8 +24,9 @@ while True:
             saldo += valor
             corpo_extrato += f"--Depósito: R${valor:.2f}--\n"
             print(f"O depósito de R${valor:.2f} foi realizado com sucesso!\n")
+
     elif opcao == "s":
-        if LIMITE_SAQUES >= numero_saques:
+        if LIMITE_SAQUES > numero_saques:
             valor = float(input("Por favor, informe o valor do saque: "))
             print()
             if valor > 0:
@@ -44,13 +42,14 @@ while True:
                     print("Solicitação negada: O valor máximo de saque deve ser R$500.00.")
         else:
             print("Desculpe, você já efetuou o número máximo de saques diários. Tente novamente amanhã. Obrigado.")
+
     elif opcao == "e":
         print()
-        print(data_atual)
         print(f"\n-------------------EXTRATO-------------------\n")
         print("Não foram realizadas operações no período.\n" if not corpo_extrato else corpo_extrato)
         print("--------------------------------------\n")
         print(f"TOTAL EM CONTA: R${saldo:.2f}")
+
     elif opcao == "q":
         print("\nObrigado por utilizar nossos serviços! Tenha um bom dia!\n")
         break
